@@ -12,7 +12,7 @@ import { Tasks } from './Components/Tasks';
         <Tasks />
         <UserData />
         <Login />
-      </RecoilRoot>
+      </RecoilRoot> 
       
     </>
 

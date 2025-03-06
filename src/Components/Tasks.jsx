@@ -16,14 +16,15 @@ export const Tasks = () => {
 
     return (
         <>
-        {taskData.map(taskName => {
+        {taskData.map (task => {
             return (
-                <>
-                <div key={taskName}>
-                <p>{taskName}</p>
-                <button onClick={() => deleteTask(taskName)} type="button">Delete Task</button>
+                
+                <div key={task.id}>
+                    <p>{task.name}</p>
+                    <p>{task.category}</p>
+                    <button onClick={() => deleteTask(task.id)} type="button">Delete Task</button>
                 </div>
-                </>
+                
             )
         })}
         {userData.loggedIn && (

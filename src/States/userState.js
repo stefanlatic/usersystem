@@ -6,6 +6,6 @@ export const userState = atom ({
     key: 'userState',
     default: {},
     effects_UNSTABLE: [
-        localStorageEffect()
+        localStorageEffect("userData")
     ],
 })
