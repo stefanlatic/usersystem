@@ -3,12 +3,12 @@ import {RecoilRoot, useRecoilValue} from 'recoil';
 import { Login } from './Components/Login';
 import UserData from './Components/UserData';
 import { Tasks } from './Components/Tasks';
+import "./App.css"
 
  const App = () => {
   return (
     <>
-      <RecoilRoot>
-        
+      <RecoilRoot>  
         <Tasks />
         <UserData />
         <Login />

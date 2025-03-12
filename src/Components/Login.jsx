@@ -16,22 +16,6 @@ export const Login = () => {
   const setUserState = useSetRecoilState(userState);
   const userData = useRecoilValue(userState);
 
-  // const EmailValidator = () => ({
-  //   required: "Email is required",
-  //           pattern: {
-  //             value: /^admin@admin.com$/i,
-  //             message: "Enter your email correct!"
-  //           }
-  //         });
-  // const PasswordValidator = () => ({
-  //     required: "Password is required",
-  //     validate: {
-  //         trimCheck: (value) => value.trim() !== "" ||  "Password cannot be empty",
-  //         capitalLetterCheck: value => /[A-Z]/.test(value) || "Password must have at least one capital letter",    
-  //         signLetterCheck: value => /[!"#$%]/.test(value) || "Password must have at least one sign (!@#$%)"
-  //     }
-  //   });
-
   const handleLogin = (data) => {
     if(data.email !== "admin@admin.com" || data.password !=="123456") {
       setError("errorData", {

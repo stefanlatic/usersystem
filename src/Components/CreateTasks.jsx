@@ -13,7 +13,7 @@ export const CreateTasks = () => {
       } = useForm();
 
 
-    const setTasks = useSetRecoilState(tasksState);
+      const setTasks = useSetRecoilState(tasksState);
     const tasks = useRecoilValue(tasksState);
  
     const createTask = (data) => {
@@ -25,6 +25,7 @@ export const CreateTasks = () => {
                 taskFound = true;
             }
         });
+        
     const newTask = {
         id: Date.now(),
         name: data.taskName,
@@ -37,9 +38,11 @@ export const CreateTasks = () => {
 
     return(
          <>
-    <form onSubmit={handleSubmit(createTask)}>
+       
+    <form className="taskCreateForm" onSubmit={handleSubmit(createTask)}>
 
     <select {...register('category')}>
+
         {categories.map(category => {
             return (
                 <option key={category} value={category}> {category} </option>
@@ -55,6 +58,8 @@ export const CreateTasks = () => {
 
         <button> Create Task</button>
     </form>
+        
+        
     </>
     )
 }
